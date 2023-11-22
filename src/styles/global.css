@@ -26,15 +26,11 @@
     --color-text-primary-button: var(--crushedWhite-100);
     --color-text-secondary-button: var(--red-500);
 
-    --color-surface:var(--green-500) ;
-    --color-surface:var(--red-500) ;
-    --color-surface:var(--crushedWhite-100) ;
-    --color-surface:var(--crushedWhite-100-6) ;
-    --color-surface:var(--gray-200) ;
+    --color-surface-green:var(--green-500) ;
+    --color-surface-red:var(--red-500) ;
+    --color-surface-white:var(--crushedWhite-100) ;
+    --color-surface-white-opacity:var(--crushedWhite-100-6) ;
+    --color-surface-gray:var(--gray-200) ;
 
-
-    --color-surface-button: var(--purple-500);
-
-   
-  
+    --color-surface-button: var(--purple-500);  
   }
