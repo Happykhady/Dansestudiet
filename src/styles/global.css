@@ -35,6 +35,10 @@
 }
 
 /* Components */
+
+main {
+  background-color: var(--color-surface-white);
+}
 nav {
   height: 10vh;
   background-color: var(--color-surface-green);

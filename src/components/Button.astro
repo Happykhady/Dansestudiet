@@ -1,0 +1,16 @@
+---
+import "../styles/global.css";
+const { variant } = Astro.props;
+---
+
+<button class={variant}></button>
+
+<style>
+  .primary {
+    color: var(--color-surface-red);
+    width: var(--spacing-large);
+  }
+
+  .secondary {
+  }
+</style>
