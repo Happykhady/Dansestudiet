@@ -3,14 +3,25 @@ import "../styles/global.css";
 const { variant } = Astro.props;
 ---
 
-<button class={variant}></button>
+<button class={variant}><slot /></button>
 
 <style>
   .primary {
-    color: var(--color-surface-red);
-    width: var(--spacing-large);
+    background-color: var(--color-surface-red);
+    padding: var(--spacing-small);
+    /* padding-left: var(--spacing-small);
+    padding-right: var(--spacing-small); */
+    border: none;
+    color: var(--color-text-primary-button);
+    font-weight: bold;
   }
 
   .secondary {
+    border-color: var(--color-surface-red);
+
+    padding: var(--spacing-small);
+    background-color: transparent;
+    color: var(--color-text-secondary-button);
+    font-weight: bold;
   }
 </style>

@@ -1,4 +1,5 @@
 ---
+import "../styles/reset.css";
 import "../styles/global.css";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
@@ -23,22 +24,32 @@ import Card from "../components/Card.astro";
       <p class="lable-large-italic">
         Tilmeldning til efterårssæsonen 2023 er fortsat åben.
       </p>
-
-      <Button variant="primary">Tilmeld dig</Button>
-      <Button variant="primary">Se Skema</Button>
+      <div class="buttons">
+        <Button variant="primary">TILMELD DIG</Button>
+        <Button variant="secondary">SE SKEMA</Button>
+      </div>
       <section>
-        <Card />
-        <Card />
+        <Card
+          title="Movement Lab"
+          text="D. 3. & 4. februar 2024. Begge dage kl. 13-16"
+          text="I denne workshop fokuserer vi på redskaber til at forbedre performance og udtryk i din dans. Vi arbejder i et trygt og konstruktivt miljø."
+        />
+        <Card
+          title="Månedens Workshop December"
+          text="D. 3. & 4. februar 2024. Begge dage kl. 13-16"
+          text="I denne workshop fokuserer vi på redskaber til at forbedre performance og udtryk i din dans. Vi arbejder i et trygt og konstruktivt miljø."
+        />
       </section>
 
       <section class="portraits">
+        <h2>Danse portrætter</h2>
         <div class="mette"></div>
         <div class="magnus"></div>
         <div class="johanne"></div>
       </section>
 
       <section class="teachers">
-        <Button />
+        <Button variant="primary">MØD DEM HER</Button>
       </section>
 
       <img src="" alt="dance video" />
