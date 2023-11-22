@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
-import Button from "../components/Button.astro"; 
-import Card from "../components/Card.astro"; 
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
 ---
 
 <html lang="en">
@@ -13,49 +13,41 @@ import Card from "../components/Card.astro";
     <title>Astro</title>
   </head>
 
-
   <body>
-<header>
-<nav></nav>
-</header>
+    <header>
+      <nav></nav>
+    </header>
+    <main>
+      <img src="" alt="dancers" />
+      <h1>Velkommen til Dansestudiet</h1>
+      <p class="lable-large-italic">
+        Tilmeldning til efterårssæsonen 2023 er fortsat åben.
+      </p>
 
-<img src="" alt="danser">
-<h1>
-  Velkommen til Dansestudiet
-</h1>
-<p class="lable-large-italic">Tilmeldning til efterårssæsonen 2023 er fortsat åben.</p>
+      <Button />
+      <Button />
 
-<Button></Button> 
-<Button></Button> 
+      <section>
+        <Card />
+        <Card />
+      </section>
 
-<section>
-  <Card></Card>
-  <Card></Card>
-</section>
+      <section class="portraits">
+        <div class="mette"></div>
+        <div class="magnus"></div>
+        <div class="johanne"></div>
+      </section>
 
-<section class="protretter">
-  <div class="mette"></div>
-  <div class="magnus"></div>
-  <div class="johanne"></div>
-</section>
+      <section class="teachers">
+        <Button />
+      </section>
 
-<section class="underviser">
-  
-  <Button></Button>
-</section>
+      <img src="" alt="dance video" />
 
+      <section class="soMe">
+        <img src="" alt="icons" />
+      </section>
+    </main>
+    <footer></footer>
   </body>
-
-  <img src="" alt="danse video">
-
-<section class="some">
-<img src="" alt="iconer">
-</section>
-
-<footer>
-  
-</footer>
 </html>
-
-
-

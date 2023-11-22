@@ -1,36 +1,46 @@
 @import "./reset.css";
 
 :root {
-    /* Global Tokens */
-    --green-500: #196572;
-  
-    --crushedWhite-100: #F9F8F8;
-    --crushedWhite-100-6:  rgba(249, 248, 248, 0.06);
-     
-    --red-500: #B72C40;
-  
-    --gray-200: #EDEBEB;
-    --gray-600: #404040;
-    --gray-900: #131313;
+  /* Global Tokens */
+  --green-500: #196572;
 
-    --spacing-small:20px;
-    --spacing-medium:40px;
-    --spacing-large:50px;
+  --crushedWhite-100: #f9f8f8;
+  --crushedWhite-100-6: rgba(249, 248, 248, 0.06);
 
-  
-    /* Alias Tokens */
-    --color-text-primary: var(--gray-900);
-    --color-text-primary-muted: var(--gray-600);
-    --color-text-secondary: var(--crushedWhite-100);
-    
-    --color-text-primary-button: var(--crushedWhite-100);
-    --color-text-secondary-button: var(--red-500);
+  --red-500: #b72c40;
 
-    --color-surface-green:var(--green-500) ;
-    --color-surface-red:var(--red-500) ;
-    --color-surface-white:var(--crushedWhite-100) ;
-    --color-surface-white-opacity:var(--crushedWhite-100-6) ;
-    --color-surface-gray:var(--gray-200) ;
+  --gray-200: #edebeb;
+  --gray-600: #404040;
+  --gray-900: #131313;
 
-    --color-surface-button: var(--purple-500);  
-  }
+  --spacing-small: 20px;
+  --spacing-medium: 40px;
+  --spacing-large: 50px;
+
+  /* Alias Tokens */
+  --color-text-primary: var(--gray-900);
+  --color-text-primary-muted: var(--gray-600);
+  --color-text-secondary: var(--crushedWhite-100);
+
+  --color-text-primary-button: var(--crushedWhite-100);
+  --color-text-secondary-button: var(--red-500);
+
+  --color-surface-green: var(--green-500);
+  --color-surface-red: var(--red-500);
+  --color-surface-white: var(--crushedWhite-100);
+  --color-surface-white-opacity: var(--crushedWhite-100-6);
+  --color-surface-gray: var(--gray-200);
+
+  --color-surface-button: var(--purple-500);
+}
+
+/* Components */
+nav {
+  height: 10vh;
+  background-color: var(--color-surface-green);
+}
+
+footer {
+  height: 30vh;
+  background-color: var(--color-surface-green);
+}
