@@ -13,11 +13,23 @@
   --gray-600: #404040;
   --gray-900: #131313;
 
-  --spacing-small: 20px;
-  --spacing-medium: 40px;
-  --spacing-large: 50px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-4-xl: 40px;
+  --spacing-5-xl: 42px;
+  --spacing-6-xl: 46px;
+  --spacing-7-xl: 50px;
+ 
 
   /* Alias Tokens */
+
+  --spacing-border-radius-small: var(--spacing-xl); 
+  --spacing-border-radius-medium:var(--spacing-4-xl);
+  --spacing-border-radius-large:var(--spacing-7-xl);
+
+
   --color-text-primary: var(--gray-900);
   --color-text-primary-muted: var(--gray-600);
   --color-text-secondary: var(--crushedWhite-100);

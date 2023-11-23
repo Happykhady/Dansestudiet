@@ -1,27 +1,46 @@
 ---
 import "../styles/global.css";
-const { variant } = Astro.props;
+const { variant , size } = Astro.props;
 ---
 
-<button class={variant}><slot /></button>
+
+
+<button data-variant={variant} data-size={size}>
+  <slot />
+</button>
+
+
+  
 
 <style>
-  .primary {
-    background-color: var(--color-surface-red);
-    padding: var(--spacing-small);
-    /* padding-left: var(--spacing-small);
-    padding-right: var(--spacing-small); */
-    border: none;
-    color: var(--color-text-primary-button);
+   
+   [data-variant="primary"] { 
+     background-color: var(--color-surface-red);
+     color: var(--color-text-primary-button);
     font-weight: bold;
-  }
+    border: none;
+}
 
-  .secondary {
-    border-color: var(--color-surface-red);
-
-    padding: var(--spacing-small);
+[data-variant="secondary"] { 
+    border: 3px solid var(--color-surface-button, #B72C40);
     background-color: transparent;
     color: var(--color-text-secondary-button);
     font-weight: bold;
-  }
+}
+
+  [data-size="large"] { 
+    font-size: 24px;
+    padding: var(--spacing-sm) var(--spacing-6-xl); 
+   }
+
+[data-size="medium"] { 
+  font-size: 18px;
+    padding: var(--spacing-md) var(--spacing-6-xl); 
+   }
+
+   [data-size="small"] { 
+font-size: 16px;
+padding: var(--spacing-sm) var(--spacing-6-xl); 
+   }
+ 
 </style>
