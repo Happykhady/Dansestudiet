@@ -21,14 +21,12 @@
   --spacing-5-xl: 42px;
   --spacing-6-xl: 46px;
   --spacing-7-xl: 50px;
- 
 
   /* Alias Tokens */
 
-  --spacing-border-radius-small: var(--spacing-xl); 
-  --spacing-border-radius-medium:var(--spacing-4-xl);
-  --spacing-border-radius-large:var(--spacing-7-xl);
-
+  --spacing-border-radius-small: var(--spacing-xl);
+  --spacing-border-radius-medium: var(--spacing-4-xl);
+  --spacing-border-radius-large: var(--spacing-7-xl);
 
   --color-text-primary: var(--gray-900);
   --color-text-primary-muted: var(--gray-600);
