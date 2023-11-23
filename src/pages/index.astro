@@ -3,14 +3,18 @@ import "../styles/reset.css";
 import "../styles/global.css";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
+import Testimonials from "../components/Testimonials.astro";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
@@ -23,45 +27,82 @@ import Card from "../components/Card.astro";
     <main>
       <img src="Heroimg.jpg" alt="dancers" />
 
-       <div class="velkommen">
-      <h1>Velkommen til Dansestudiet</h1>
-      <p class="lable-large-italic">
-        Tilmeldning til efterårssæsonen 2023 er fortsat åben.
-      </p>
-    </div>
+      <div class="velkommen">
+        <h1>Velkommen til Dansestudiet</h1>
+        <p class="lable-large-italic">
+          Tilmeldning til efterårssæsonen 2023 er fortsat åben.
+        </p>
+      </div>
 
       <div class="buttons">
         <Button variant="primary" size="large">TILMELD</Button>
         <Button variant="secondary" size="large">SE SKEMA</Button>
       </div>
-      <section>
-        <Card
-          title="Movement Lab"
-          text="D. 3. & 4. februar 2024. Begge dage kl. 13-16"
-          text="I denne workshop fokuserer vi på redskaber til at forbedre performance og udtryk i din dans. Vi arbejder i et trygt og konstruktivt miljø."
-        />
-        <Card
-          title="Månedens Workshop December"
-          text="D. 3. & 4. februar 2024. Begge dage kl. 13-16"
-          text="I denne workshop fokuserer vi på redskaber til at forbedre performance og udtryk i din dans. Vi arbejder i et trygt og konstruktivt miljø."
-        />
+      <section class="cards">
+        <div class="movment">
+          <img src="movementlab.jpg" alt="" />
+          <Card
+            title="Movement Lab"
+            text="D. 3. & 4. februar 2024. Begge dage kl. 13-16"
+            text="I denne workshop fokuserer vi på redskaber til at forbedre performance og udtryk i din dans. Vi arbejder i et trygt og konstruktivt miljø."
+          />
+        </div>
+        <div class="workshop">
+          <img src="månedensworkshop.jpg" alt="" />
+          <Card
+            title="Månedens Workshop December"
+            text="D. 3. & 4. februar 2024. Begge dage kl. 13-16"
+            text="I denne workshop fokuserer vi på redskaber til at forbedre performance og udtryk i din dans. Vi arbejder i et trygt og konstruktivt miljø."
+          />
+        </div>
       </section>
 
+      <section class="green">
+      <h2 class="h2-hvid">Danse portrætter</h2>
       <section class="portraits">
-        <h2>Danse portrætter</h2>
-        <div class="mette"></div>
-        <div class="magnus"></div>
-        <div class="johanne"></div>
+        <div class="person">
+        <img class="img" src="johanne.jpg" alt="">
+        <Testimonials
+          title="Johanne"
+          alder="28 år"
+          text="Her ksksksksksndknjvsdfn sfknsfæafjfjd sdlkfsfjhsd sdlfkw"
+        />
+      </div>
+      <div class="person">
+        <img class="img" src="johan.jpg" alt="">
+        <Testimonials
+          title="Johanne"
+          alder="28 år"
+          text="Her ksksksksksndknjvsdfn sfknsfæafjfjd sdlkfsfjhsd sdlfkw"
+        />
+      </div>
+      <div class="person">
+        <img class="img" src="mette.jpg" alt="">
+        <Testimonials
+          title="Johanne"
+          alder="28 år"
+          text="Her ksksksksksndknjvsdfn sfknsfæafjfjd sdlkfsfjhsd sdlfkw"
+        />
+      </div>
       </section>
+    </section>
 
       <section class="teachers">
+        <h2>25 kompetente undervisere!</h2>
+        <label>Vi har samlet et unikt underviserteam</label>
         <Button variant="primary">MØD DEM HER</Button>
+        <img src="instagram.jpg" alt="dance video" />
+        
+      <h3>Følg os på de sociale medier</h3>
+      <p>@dansestudietaarhus</p>
       </section>
 
-      <img src="" alt="dance video" />
-
+    
       <section class="soMe">
-        <img src="" alt="icons" />
+        <img src="youtube.png" alt="icons" />
+        <img src="facebook.png" alt="">
+        <img src="google.png" alt="">
+        <img src="instagram.png" alt="">
       </section>
     </main>
     <footer></footer>
@@ -69,10 +110,64 @@ import Card from "../components/Card.astro";
 </html>
 
 <style>
-  .velkommen{
+.soMe{
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+  .teachers{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  .person{
+    display: flex;
+padding: 10px;
+flex-direction: column;
+gap: 10px;
+  }
+
+  .green{
+    background-color: var(--color-surface-green);
+    gap: 74px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  .img {
+    border-radius: var(--spacing-border-radius-large);
+    justify-self: center;
+  }
+  .portraits {
+    display: flex;
+    gap: 80px; 
+    flex-direction: row;
+    margin: 0 50px 0 50px;
+    align-items: center;
+    justify-content: center;
+  }
+  .h2-hvid {
+    color: var(--color-text-secondary);
+  }
+  .cards {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: var(--spacing-6-xl, 46px);
+  }
+  .movment {
+    display: flex;
+    align-items: center;
+    gap: 15.75px;
+  }
+  .workshop {
+    display: flex;
+    align-items: center;
+    gap: 15.75px;
+  }
+  .velkommen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>

@@ -59,9 +59,6 @@ nav {
   gap: var(--spacing-md);
   justify-content: center;
 }
-.portraits {
-  background-color: var(--color-surface-green);
-}
 
 footer {
   height: 30vh;

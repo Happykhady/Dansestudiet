@@ -4,19 +4,18 @@ const { title, text } = Astro.props;
 ---
 
 <article class="card">
-  <img src="" alt="" />
-  <div>
+   
     <h3>{title}</h3>
     <label>{text}</label>
     <p>{text}</p>
     <a href="#0"> <Button variant="primary">LÆS MERE</Button></a>
-  </div>
 </article>
 
 <style>
   .card {
-    padding: var(--spacing-small);
-    margin: var(--spacing-small);
-    border: 3px solid black;
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 29.25px;
   }
 </style>

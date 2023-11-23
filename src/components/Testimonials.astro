@@ -1,0 +1,23 @@
+---
+const { title, text , alder } = Astro.props;
+---
+<div>
+
+<h3>{title}</h3>
+    <label>{alder}</label>
+    <p>{text}</p>
+</div>
+
+<style>
+    h3{
+        color: var(--color-text-secondary);
+    }
+
+    label{
+        color: var(--color-text-secondary);
+    }
+    p{
+        color: var(--color-text-secondary);
+        font-weight: 300;
+    }
+</style>
