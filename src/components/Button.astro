@@ -31,7 +31,7 @@ const { variant , size } = Astro.props;
 }
 
   [data-size="large"] { 
-    font-size: 1rem;
+    font-size: 0.6rem;
    }
 
 [data-size="medium"] { 
@@ -41,5 +41,14 @@ font-size: 0.8rem;
    [data-size="small"] { 
 font-size: 0.6rem;
    }
+
+
+   
+@media screen and (min-width: 800px;) {
+
+    [data-size="large"] { 
+    font-size: 1rem;
+   }
+}
  
 </style>

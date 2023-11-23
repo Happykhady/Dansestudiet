@@ -22,7 +22,8 @@ import Card from "../components/Card.astro";
     </header>
     <main>
       <img src="Heroimg.jpg" alt="dancers" />
-      <div class="velkommen">
+
+       <div class="velkommen">
       <h1>Velkommen til Dansestudiet</h1>
       <p class="lable-large-italic">
         Tilmeldning til efterårssæsonen 2023 er fortsat åben.
@@ -68,9 +69,10 @@ import Card from "../components/Card.astro";
 </html>
 
 <style>
-
-  button{
+  .velkommen{
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
   }
+
 </style>
