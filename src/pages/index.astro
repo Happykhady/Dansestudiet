@@ -22,10 +22,12 @@ import Card from "../components/Card.astro";
     </header>
     <main>
       <img src="Heroimg.jpg" alt="dancers" />
+      <div class="velkommen">
       <h1>Velkommen til Dansestudiet</h1>
       <p class="lable-large-italic">
         Tilmeldning til efterårssæsonen 2023 er fortsat åben.
       </p>
+    </div>
 
       <div class="buttons">
         <Button variant="primary" size="large">TILMELD</Button>
@@ -66,9 +68,10 @@ import Card from "../components/Card.astro";
 </html>
 
 <style>
-
-  button{
-    display: flex;
-    
-  }
+.velkommen{
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+ 
 </style>

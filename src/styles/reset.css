@@ -17,7 +17,7 @@ html {
 
   color: var(--gray-7);
 
-  font-family: var(--font-sans);
+  font-family: 'Prompt', sans-serif;
 
   font-size: calc(15px + 0.390625vw);
 
@@ -59,8 +59,7 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
-
+   overflow-wrap: break-word;
   font-size: initial;
 }
 
@@ -72,6 +71,6 @@ h3 {
   line-height: var(--font-lineheight-0);
 }
 
- h1{
-  font-size: 2.4rem;
-}
+
+
+
