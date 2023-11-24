@@ -1,23 +1,30 @@
 ---
-const { title, text , alder } = Astro.props;
+const { title, text, alder } = Astro.props;
 ---
-<div>
 
-<h3>{title}</h3>
-    <label>{alder}</label>
-    <p>{text}</p>
+<div class="card1">
+  <h3>{title}</h3>
+  <label>{alder}</label>
+  <p>{text}</p>
 </div>
 
 <style>
-    h3{
-        color: var(--color-text-secondary);
-    }
+  .card1 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  h3 {
+    color: var(--color-text-secondary);
+  }
 
-    label{
-        color: var(--color-text-secondary);
-    }
-    p{
-        color: var(--color-text-secondary);
-        font-weight: 300;
-    }
+  label {
+    color: var(--color-text-secondary);
+  }
+  p {
+    color: var(--color-text-secondary);
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 28px;
+  }
 </style>

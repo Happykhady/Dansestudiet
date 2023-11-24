@@ -11,10 +11,9 @@ import Testimonials from "../components/Testimonials.astro";
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
@@ -25,7 +24,8 @@ import Testimonials from "../components/Testimonials.astro";
       <nav></nav>
     </header>
     <main>
-      <img src="Heroimg.jpg" alt="dancers" />
+
+      <div class="hero"><img src="Heroimg.jpg" alt="dancers" /></div>
 
       <div class="velkommen">
         <h1>Velkommen til Dansestudiet</h1>
@@ -40,18 +40,18 @@ import Testimonials from "../components/Testimonials.astro";
       </div>
       <section class="cards">
         <div class="movment">
-          <img src="movementlab.jpg" alt="" />
+          <img class="dame" src="movementlab.jpg" alt="" />
           <Card
             title="Movement Lab"
-            text="D. 3. & 4. februar 2024. Begge dage kl. 13-16"
+            dato="D. 3. & 4. februar 2024. Begge dage kl. 13-16"
             text="I denne workshop fokuserer vi på redskaber til at forbedre performance og udtryk i din dans. Vi arbejder i et trygt og konstruktivt miljø."
           />
         </div>
         <div class="workshop">
-          <img src="månedensworkshop.jpg" alt="" />
+          <img class="dame" src="månedensworkshop.jpg" alt="" />
           <Card
-            title="Månedens Workshop December"
-            text="D. 3. & 4. februar 2024. Begge dage kl. 13-16"
+            title="Månedens Workshop"
+            dato="D. 3. & 4. februar 2024. Begge dage kl. 13-16"
             text="I denne workshop fokuserer vi på redskaber til at forbedre performance og udtryk i din dans. Vi arbejder i et trygt og konstruktivt miljø."
           />
         </div>
@@ -65,23 +65,23 @@ import Testimonials from "../components/Testimonials.astro";
         <Testimonials
           title="Johanne"
           alder="28 år"
-          text="Her ksksksksksndknjvsdfn sfknsfæafjfjd sdlkfsfjhsd sdlfkw"
+          text="Her, ved at danse, skaber jeg ikke kun bevægelse, men også en dybere forbindelse til min egen styrke og lidenskab."
         />
       </div>
       <div class="person">
-        <img class="img" src="johan.jpg" alt="">
+        <img id="johan" class="img" src="johan.jpg" alt="">
         <Testimonials
-          title="Johanne"
-          alder="28 år"
-          text="Her ksksksksksndknjvsdfn sfknsfæafjfjd sdlkfsfjhsd sdlfkw"
+          title="Magnus"
+          alder="22 år"
+          text=" I Dansestudiet dyrker jeg min kreativitet og styrker krop og sjæl, skabende bevægelse og passion i hvert trin."
         />
       </div>
       <div class="person">
         <img class="img" src="mette.jpg" alt="">
         <Testimonials
-          title="Johanne"
-          alder="28 år"
-          text="Her ksksksksksndknjvsdfn sfknsfæafjfjd sdlkfsfjhsd sdlfkw"
+          title="Mette"
+          alder="67 år"
+          text="Jeg omfavner livets rytme, udforsker glæden ved bevægelse og opdager en tidløs kilde til velvære på enhvert livsstadie."
         />
       </div>
       </section>
@@ -91,12 +91,13 @@ import Testimonials from "../components/Testimonials.astro";
         <h2>25 kompetente undervisere!</h2>
         <label>Vi har samlet et unikt underviserteam</label>
         <Button variant="primary">MØD DEM HER</Button>
-        <img src="instagram.jpg" alt="dance video" />
-        
-      <h3>Følg os på de sociale medier</h3>
-      <p>@dansestudietaarhus</p>
       </section>
 
+      <section class="teachers">
+        <img src="instagram.jpg" alt="dance video" /> 
+        <h3>Følg os på de sociale medier</h3>
+        <p>@dansestudietaarhus</p>
+      </section>
     
       <section class="soMe">
         <img src="youtube.png" alt="icons" />
@@ -110,15 +111,36 @@ import Testimonials from "../components/Testimonials.astro";
 </html>
 
 <style>
+
+
+  .dame{
+    border-top-left-radius: var(--spacing-border-radius-large) ;
+    border-bottom-left-radius: var(--spacing-border-radius-large);
+  }
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-bottom: 100px;
+}
+  .hero{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-surface-green);
+  }
 .soMe{
   display: flex;
   justify-content: center;
   gap: 25px;
+  margin-bottom: var(--spacing-between-section);
 }
   .teachers{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: var(--spacing-between-section) 0 var(--spacing-between-section) 0;
+    gap: var(--spacing-between);
   }
 
   .person{
@@ -126,6 +148,10 @@ import Testimonials from "../components/Testimonials.astro";
 padding: 10px;
 flex-direction: column;
 gap: 10px;
+  }
+
+  .person img{
+  object-fit: fill;  
   }
 
   .green{
@@ -146,28 +172,70 @@ gap: 10px;
     margin: 0 50px 0 50px;
     align-items: center;
     justify-content: center;
+    width: 70%;
+    margin-bottom: var(--spacing-between-section);
   }
   .h2-hvid {
     color: var(--color-text-secondary);
+    margin-top: var(--spacing-between-section);
   }
   .cards {
     display: inline-flex;
     align-items: flex-start;
     gap: var(--spacing-6-xl, 46px);
+    margin: 0 var(--spacing-4-xl) var(--spacing-between-section)  var(--spacing-4-xl);
   }
-  .movment {
+ 
+  .workshop, .movment {
     display: flex;
     align-items: center;
     gap: 15.75px;
-  }
-  .workshop {
-    display: flex;
-    align-items: center;
-    gap: 15.75px;
+    border-radius: 30px;
+    border-radius: var(--spacing-border-radius-large);
+background: var(--color-crushed-white-1006, rgba(249, 248, 248, 0.06));
+box-shadow: 0px 3px 10.5px 0px rgba(0, 0, 0, 0.10);
   }
   .velkommen {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--spacing-between);
+    margin: var(--spacing-between-section) 0 30px 0; /* Varianter?? */
+  }
+
+
+  @media screen and (max-width:899px) {
+    .portraits {
+    display: flex;
+    gap: 80px; 
+    flex-direction: column;
+    margin: 0 50px 0 50px;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin-bottom: var(--spacing-between-section);
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-6-xl, 46px);
+    margin: 0 var(--spacing-4-xl) var(--spacing-between-section)  var(--spacing-4-xl);
+  }
+    
+  .workshop, .movment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15.75px;
+    border-radius: 30px;
+    border-radius: var(--spacing-border-radius-large);
+background: var(--color-crushed-white-1006, rgba(249, 248, 248, 0.06));
+box-shadow: 0px 3px 10.5px 0px rgba(0, 0, 0, 0.10);
+  }
+
   }
 </style>
+
+
